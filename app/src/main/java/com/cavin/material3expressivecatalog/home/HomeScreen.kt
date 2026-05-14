@@ -29,6 +29,7 @@ import androidx.compose.material.icons.filled.CallToAction
 import androidx.compose.material.icons.filled.Loop
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Navigation
+import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.TouchApp
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.filled.ViewWeek
@@ -53,6 +54,7 @@ fun HomeScreen(
     onNavigateToSplitButtonRoute: () -> Unit,
     onNavigateToVerticalFloatingToolbarRoute: () -> Unit,
     onNavigateToWideNavigationRailRoute: () -> Unit,
+    onNavigateToColorRoute: () -> Unit,
 ) {
     val homeItems = listOf(
         HomeItemData(
@@ -74,6 +76,11 @@ fun HomeScreen(
             title = "Bottom App Bar Example",
             icon = Icons.Filled.CallToAction,
             onClickAction = onNavigateToBottomAppBarRoute,
+        ),
+        HomeItemData(
+            title = "Colors Example",
+            icon = Icons.Filled.Palette,
+            onClickAction = onNavigateToColorRoute,
         ),
         HomeItemData(
             title = "Fab Menu Example",

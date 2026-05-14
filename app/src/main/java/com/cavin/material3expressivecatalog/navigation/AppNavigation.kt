@@ -31,6 +31,7 @@ import com.cavin.material3expressivecatalog.PremiumSplashScreen
 import com.cavin.material3expressivecatalog.components.bottomappbar.bottomAppBarNavGraph
 import com.cavin.material3expressivecatalog.components.buttongroup.groupButtonNavGraph
 import com.cavin.material3expressivecatalog.components.buttons.buttonNavGraph
+import com.cavin.material3expressivecatalog.components.colors.colorNavGraph
 import com.cavin.material3expressivecatalog.components.fab.fabMenuNavGraph
 import com.cavin.material3expressivecatalog.components.floatingtoolbar.floatingToolBarNavGraph
 import com.cavin.material3expressivecatalog.components.largefab.largeFabNavGraph
@@ -128,6 +129,11 @@ fun AppNavigation() {
                             WideNavigationRailRoutes.ToolbarRoute,
                         )
                     },
+                    onNavigateToColorRoute = {
+                        backStack.add(
+                            ColorRoutes.ListingRoute,
+                        )
+                    },
                 )
             }
 
@@ -152,6 +158,8 @@ fun AppNavigation() {
             verticalFloatingToolBarNavGraph()
 
             wideNavigationRailNavGraph()
+
+            colorNavGraph(backStack)
         },
     )
 }

@@ -159,3 +159,16 @@ sealed interface WideNavigationRailRoutes :
     @Serializable
     data object ToolbarRoute : NavKey, WideNavigationRailRoutes
 }
+
+sealed interface ColorRoutes :
+    Routes,
+    NavKey {
+    @Serializable
+    data object ListingRoute : NavKey, ColorRoutes
+
+    @Serializable
+    data object ColorRolesRoute : NavKey, ColorRoutes
+
+    @Serializable
+    data object ColorExamplesRoute : NavKey, ColorRoutes
+}
